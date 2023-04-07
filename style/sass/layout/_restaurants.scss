@@ -1,0 +1,40 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+/***** Restaurants Section *****/
+/**/
+.restaurants {
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    @include padding-container__mobile;
+    @include sections-main-style;
+
+    @include desktop {
+      @include padding-container__desktop;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__cards > article {
+    @include desktop {
+      flex: 50%;
+    }
+  }
+}

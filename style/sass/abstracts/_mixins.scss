@@ -1,0 +1,64 @@
+@use "../abstracts/variables";
+
+
+// *** btn *** //
+
+@mixin btn-action($state) {
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  $palette:map-get($btn-action-palette, $state);
+  background: map-get($palette, background-color);
+}
+
+@mixin btn-shadow($state) {
+  $palette:map-get($btn-shadow-palette, $state);
+  box-shadow: map-get($palette, box-shadow);
+}
+
+@mixin function-button($state) {
+  $palette:map-get($function-btn-palette, $state);
+  background-color: map-get($palette, background-color);
+  color: map-get($palette, txt);
+}
+
+//*** layout ***//
+
+@mixin padding-container__mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@mixin padding-container__desktop {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin sections-main-style {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  gap: 25px;
+}
+
+@mixin footer-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+//*** breakpoints ***//
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints, desktop)){
+    @content;
+  }
+}

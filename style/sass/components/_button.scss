@@ -1,0 +1,13 @@
+@import "../abstracts/mixins";
+
+/***** Button *****/
+.explore__btn {
+  text-align: center;
+  transition: all .3s;
+  @include btn-action(active);
+  @include btn-shadow(active);
+  &:hover {
+    @include btn-shadow(hover);
+    @include btn-action(hover);
+  }
+}

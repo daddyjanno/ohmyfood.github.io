@@ -1,0 +1,29 @@
+@import "../abstracts/mixins";
+/***** Fonts *****/
+
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+h1 {
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  // @include text-ellipsis;
+}
+h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  // @include text-ellipsis
+}
+h3 {
+  font-size: 1.4rem;
+  @include text-ellipsis;
+}
+p, a {
+  font-family: "Roboto", sans-serif;
+  font-weight: light;
+  color: black;
+}

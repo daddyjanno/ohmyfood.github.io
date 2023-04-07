@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&family=Shrikhand&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/029f237056.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/css/prefixed/style.css">
+  <title>ohmyfood</title>
+</head>
+<body>
+
+  <!-- loader -->
+  <div class="loader">
+    <div id="loader">
+      <div class="loader__shadow">
+        <i class="fa-solid fa-utensils loader__icon"></i>
+        <i class="fa-solid fa-book-open loader__icon"></i>
+        <i class="fa-solid fa-martini-glass-citrus loader__icon"></i>
+        <div class="loader__circle"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <img src="./Footage/Logo/ohmyfood.png" alt="Logo ohmyfood" class="header__logo">
+  </header>
+
+  <main>
+
+    <section class="localisation">
+      <div class="container localisation__container">
+        <i class="fa-solid fa-location-dot localisation__icon"></i>
+        <form class="localisation__form">
+          <input type="search" placeholder="Paris, Belleville">
+        </form>
+      </div>
+    </section>
+
+    <section class="explore">
+      <div class="container explore__container">
+        <h1 class="explore__title">Réservez le menu qui vous convient</h1>
+        <p class="explore__para">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <a href="#restaurants" class="explore__btn ">Explorer nos restaurants</a>
+      </div>
+    </section>
+
+    <section class="functioning">
+      <div class="container functioning__container">
+        <h1 class="functioning__title">Fonctionnement</h1>
+        <div class="functioning__buttons">
+          <div class="function-button">
+            <p class="function-button__bubble">1</p>
+            <i class="fa-sharp fa-solid fa-mobile-screen-button function-button__icon"></i>
+            <p class="function-button__para">Choisissez un restaurant</p>
+          </div>
+          <div class="function-button">
+            <p class="function-button__bubble">2</p>
+            <i class="fa-solid fa-list function-button__icon"></i>
+            <p class="function-button__para">Composez votre menu</p>
+          </div>
+          <div class="function-button">
+            <p class="function-button__bubble">3</p>
+            <i class="fa-solid fa-store function-button__icon"></i>
+            <p class="function-button__para">Dégustez au restaurant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurants" id="restaurants">
+      <div class="container restaurants__container">
+        <h1>Restaurants</h1>
+        <div class="restaurants__cards">
+          <a href="./pages/la_palette_du_gout.html" class="card__link">
+            <article class="card">
+              <span class="card__label">Nouveau</span>
+              <img
+                srcset="./footage/Images/la_palette_du_gout-1280w.webp 1280w,
+                        ./footage/Images/la_palette_du_gout-1920w.webp 1920w,
+                        ./footage/Images/la_palette_du_gout-2560w.webp 2560w"
+                sizes="(max-width: 1280px) 1280w, (max-width: 1920px) 1920w, (max-width: 2560px) 2560w"
+                src="./footage/Images/la_palette_du_gout.webp"
+                alt="Image du restaurant La Palette du Goût"
+                class="card__img img__palette">
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title">La palette du goût</h3>
+                  <p class="card__subtitle">Ménilmontant</p>
+                </div>
+                <div class="favorite">
+                  <i class="fa-regular fa-heart favorite__icon">
+                  </i>
+                  <i class="fa-solid fa-heart favorite__icon--hover"></i>
+                </div>
+            </article>
+          </a>
+          <a href="./pages/la_note_enchantee.html" class="card__link">
+            <article class="card">
+              <span class="card__label">Nouveau</span>
+              <img
+                srcset="./footage/Images/la_note_enchantee-1280w.webp 1280w,
+                        ./footage/Images/la_note_enchantee-1920w.webp 1920w,
+                        ./footage/Images/la_note_enchantee-2560w.webp 2560w"
+                sizes="(max-width: 1280px) 1280w, (max-width: 1920px) 1920w, (max-width: 2560px) 2560w"
+                src="./footage/Images/la_note_enchantee.webp"
+                alt="Image du restaurant La note enchantée"
+                class="card__img img__note">
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title">La note enchantée</h3>
+                  <p class="card__subtitle">Charonne</p>
+                </div>
+                <div class="favorite">
+                  <i class="fa-regular fa-heart favorite__icon">
+                  </i>
+                  <i class="fa-solid fa-heart favorite__icon--hover"></i>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="./pages/a_la_francaise.html" class="card__link">
+            <article class="card">
+              <img
+                srcset="./footage/Images/a_la_francaise-1280w.webp 1280w,
+                        ./footage/Images/a_la_francaise-1920w.webp 1920w
+                        ./footage/Images/a_la_francaise-2560w.webp 2560w"
+                sizes="(max-width: 1280px) 1280w, (max-width: 1920px) 1920w, (max-width: 2560px) 2560w"
+                src="./footage/Images/a_la_francaise.webp"
+                alt="Image du restaurant À la française"
+                class="card__img img__francaise">
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title">À la française</h3>
+                  <p class="card__subtitle">Cité Rouge</p>
+                </div>
+                <div class="favorite">
+                  <i class="fa-regular fa-heart favorite__icon">
+                  </i>
+                  <i class="fa-solid fa-heart favorite__icon--hover"></i>
+                </div>
+              </div>
+            </article>
+          </a>
+          <a href="./pages/le_delice_des_sens.html" class="card__link">
+            <article class="card">
+              <img
+                srcset="./footage/Images/le_delice_des_sens-1280w.webp 1280w,
+                        ./footage/Images/le_delice_des_sens-1920w.webp 1920w
+                        ./footage/Images/le_delice_des_sens-2560w.webp 2560w"
+                sizes="(max-width: 1280px) 1280w, (max-width: 1920px) 1920w, (max-width: 2560px) 2560w"
+                src="./footage/Images/le_delice_des_sens.webp"
+                alt="Image du restaurant Le délice des sens"
+                class="card__img img__delice">
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title">Le délice des sens</h3>
+                  <p class="card__subtitle">Folie-Méricourt</p>
+                </div>
+                <div class="favorite">
+                  <i class="fa-regular fa-heart favorite__icon"></i>
+                  <i class="fa-solid fa-heart favorite__icon--hover"></i>
+                </div>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="container footer__container">
+      <a href="#" id="footer__logo">
+        <img src="./Footage/Logo/ohmyfood@2x.svg" alt="Logo ohmyfood" class="footer__logo">
+      </a>
+      <div class="about">
+        <a href="#" class="about__restaurant">
+          <i class="fa-solid fa-utensils restaurant__icon"></i>
+          <p>Proposer un restaurant</p>
+        </a>
+        <a href="#" class="about__partnership">
+          <i class="fa-solid fa-handshake-angle partnership__icon"></i>
+          <p>Devenir partenaire</p>
+        </a>
+        <a href="#" class="about__legal">Mentions légales</a>
+        <a href="mailto:email@xyz.com" class="about__contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

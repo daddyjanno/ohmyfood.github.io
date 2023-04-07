@@ -1,0 +1,115 @@
+@use "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+/***** Dish Card *****/
+
+@keyframes card__apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes check-icon-rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.dish-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  @include btn-shadow(active);
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation: card__apparition .6s #{$i * .1}s ease-out both;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 10rem;
+    padding: 15px 5px 15px 15px ;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-right: 20px;
+    @include text-ellipsis;
+  }
+
+  &__desc {
+    font-weight: lighter;
+    font-size: 1rem;
+    @include text-ellipsis;
+    margin-right: 20px;
+  }
+
+  &__amount {
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all .4s;
+    transform: translateX(0px);
+  }
+
+  &__price {
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 15px 15px 0px;
+  }
+
+  &:hover > .check-circle {
+    width: 5rem;
+  }
+
+  &:hover > i {
+    transform: rotate(0deg);
+    top: 1.5rem;
+    right: 1.5rem;
+    animation: check-icon-rotation .3s ease-out both;
+  }
+}
+
+.check-circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 0px;
+  height: 80px;
+  transition: all .4s ease-out;
+  background-color: $colour-tertiary;
+
+  &__icon {
+    position: absolute;
+    top: 1.5rem;
+    right: -2.5rem;
+    color: white;
+    font-size: 2rem;
+    background-color: $colour-tertiary;
+    border-radius: 50%;
+    transition: all .4s ease-out;
+  }
+}

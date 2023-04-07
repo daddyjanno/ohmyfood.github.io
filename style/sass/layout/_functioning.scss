@@ -1,0 +1,80 @@
+@use "../abstracts/variables";
+@import "../abstracts/mixins";
+
+/***** Functioning Section *****/
+/**/
+
+.functioning {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    @include sections-main-style;
+    @include padding-container__mobile;
+
+    @include desktop {
+      @include padding-container__desktop
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.function-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 28px 30px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    @include function-button(active);
+    @include btn-shadow(active);
+    transition: all .3s;
+
+    &:hover {
+      @include function-button(hover);
+      @include btn-shadow(hover);
+    }
+
+    &:hover > i {
+      color: $colour-primary;
+    }
+
+    &__bubble {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: -10px;
+      color: white;
+      background-color: $colour-primary;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+
+    &__para {
+      font-weight: 500;
+    }
+
+    &__icon {
+      font-size: 1.4rem;
+      color: #7E7E7E;
+
+    }
+
+    @include desktop {
+      width: 30%;
+    }
+  }

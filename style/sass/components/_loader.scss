@@ -1,0 +1,99 @@
+@use "../abstracts/variables";
+
+/***** Loader *****/
+
+@keyframes loader__circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+
+  0% {
+    transform: scale(0);
+  }
+  1% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes loader-icons {
+  0% {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  11% {
+    transform: scale(1.2) translate3d(0, 0, 0);
+  }
+  22% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  33% {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+}
+
+#loader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba($color: #fff, $alpha: .8);
+  transform: scale(0);
+  animation: loader 4s ;
+}
+
+.loader {
+  &__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+  }
+
+  &__circle {
+    width: 100%;
+    height: 100%;
+    border: 5px solid $colour-primary;
+    border-radius: 50%;
+    border-left-color: rgba($color: $colour-primary, $alpha: .3);
+    animation: loader__circle 1s linear infinite;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    color: $colour-primary;
+    transform: scale(0) translate3d(0, 0, 0);
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation: loader-icons 3s #{$i * 1}s ease-in-out infinite;
+      }
+    }
+  }
+}

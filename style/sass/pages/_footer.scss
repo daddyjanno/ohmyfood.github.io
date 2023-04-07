@@ -1,0 +1,69 @@
+@import "../abstracts/mixins";
+
+
+/***** Footer *****/
+footer {
+  background-color: #363636;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include padding-container__mobile;
+
+    @include desktop {
+      flex-direction: row-reverse;
+      align-items: center;
+      @include padding-container__desktop;
+      padding-top: 60px;
+    }
+  }
+
+  &__logo {
+    width: 130px;
+    filter: invert(1);
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  &__restaurant {
+    @include footer-style;
+    & > i, p {
+      color: white;
+    }
+    & > p {
+      @include text-ellipsis;
+    }
+  }
+
+  &__partnership {
+    @include footer-style;
+    & > i, p {
+      color: white;
+    }
+    & > p {
+      @include text-ellipsis
+    }
+  }
+}
+
+.about a {
+  color: white;
+  @include text-ellipsis;
+}

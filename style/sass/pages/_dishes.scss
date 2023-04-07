@@ -1,0 +1,32 @@
+@use "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+/***** Dishes *****/
+
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  width: 100%;
+  @include padding-container__mobile;
+
+  @include desktop {
+    max-width: 80%;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    width: 50px;
+    text-transform:uppercase;
+    border-bottom: 3px solid $colour-tertiary ;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+}

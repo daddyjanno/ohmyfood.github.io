@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+
+/***** Localisation Section *****/
+/**/
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 234, 234);
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    padding-left: 85px;
+  }
+
+  &__form {
+    width: 200px;
+
+    & > input {
+      width: 80%;
+      font-size: 16px;
+      border: none;
+      background-color: transparent;
+      color: black;
+      @include text-ellipsis;
+    }
+
+    & > input:focus {
+      border: none;
+      outline: none;
+    }
+
+    & > input::placeholder {
+      color: black;
+      font-size: 16px;
+    }
+  }
+}

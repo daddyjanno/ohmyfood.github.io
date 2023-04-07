@@ -1,0 +1,30 @@
+@import "../abstracts/mixins";
+
+/***** Explore Section *****/
+/**/
+
+.explore {
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    height: 295px;
+    @include padding-container__mobile;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 0px 10px;
+  }
+
+  &__para {
+    text-align: center;
+  }
+}

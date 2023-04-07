@@ -1,0 +1,13 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/sass/main.scss:./style/css/style.css",
+    "prefix": "postcss --watch ./style/css/style.css --use autoprefixer -d ./style/css/prefixed"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

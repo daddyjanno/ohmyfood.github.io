@@ -1,0 +1,47 @@
+
+
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+
+
+$function-btn-palette: (
+  active: (
+    background-color: white,
+    icon-color: #7E7E7E
+  ),
+  hover: (
+    background-color: rgba($colour-primary, $alpha: 0.2),
+    icon-color: $colour-primary
+  )
+);
+
+$btn-shadow-palette: (
+  active: (
+    box-shadow: 0px 3px 10px rgb(210, 210, 210)
+  ),
+  hover: (
+    box-shadow: 1px 3px 10px 2px rgb(170, 170, 170)
+  )
+);
+
+$btn-action-palette: (
+  active: (
+    background-color: linear-gradient(
+    174deg,
+    $colour-secondary,
+    $colour-primary
+    )
+  ),
+  hover: (
+    background-color: linear-gradient(
+    174deg,
+    lighten($colour-secondary, 5),
+    lighten($colour-primary, 5)
+    )
+  )
+);
+
+$breakpoints: (
+  desktop: 768px
+);
