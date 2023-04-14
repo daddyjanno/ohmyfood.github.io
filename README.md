@@ -1,6 +1,6 @@
 ![Logo de la compagnie ohmyfood.](/footage/Logo/ohmyfood-white.png)
 
-__Ma mission est de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques__, en m'appuyant sur [les maquettes Figma](https://openclassrooms.com/fr/paths/516/projects/637/assignment#:~:text=Maquettes%20mobile%20et%20desktop%20du%20site%20Ohmyfood)
+__Ma mission est de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques__, en m'appuyant sur [les maquettes Figma](https://www.figma.com/file/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=0-1&t=Rhtl9kN6JZFVsG32-0)
 fournies par notre UX designer.
 
 - Utilisation de Sass avec la méthode BEM
